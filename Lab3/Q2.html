@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input type="text" name="k" id='k'>
+<input type="submit" name="s" onclick="something()" value="pig it">
+<p id='ok'></p>
+
+<script type="text/javascript">
+	
+	somelist = []
+	function something(){
+	var s = document.getElementById('k').value;
+	document.getElementById('k').value = '';
+	var l = s.split(' ');
+	var k = '';
+	// console.log(l)
+	var newlist = [];
+	for(i in l){
+		k = l[i].slice(1)+l[i].slice(0,1)+'ay';
+		newlist.push(k);
+		}
+	// console.log(newlist.join(' '))
+	// Ritwij Almighty
+	somelist.push(newlist.join(' '))
+	document.getElementById('ok').innerText = somelist.join('\n');
+	}
+</script>
+
+
+</body>
+</html>
