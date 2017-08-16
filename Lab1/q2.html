@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+</head>
+<body>
+<script type="text/javascript">
+	function activate(){
+		if(document.getElementById('other').checked) {
+			document.getElementById("other_interest").style.display='block'
+		}
+		else {
+  			document.getElementById("other_interest").style.display='none'
+  			// alert("something")
+		}
+
+		
+	}
+	// i=0
+	// function another(){
+	// 	i++
+	// 	if(i%2==0)
+	// 	alert("datz mah nigga")
+	// }
+</script>
+<div class="bg">
+<form action="success.html">
+<!-- <fieldset style="padding:10px"> -->
+	
+	<label for="name">Name</label>
+	<input type="text" id="name"/>
+	<br><br>
+	<label for="address">Address</label>
+	<input type="text" id="address"/>
+	<br><br>
+	<label for="email">Email</label>
+	<input type="text" id="email"/>
+	<br><br>
+	<h2>What did you like the most about our campus?</h2>
+	<p>
+	<input type="checkbox" name="likes" value="students"/><label for="students">Students</label>
+	<input type="checkbox" name="likes" value="location"/><label for="students">Location</label>
+	<input type="checkbox" name="likes" value="campus"/><label for="students">Campus</label>
+	<input type="checkbox" name="likes" value="atmosphere"/><label for="students">Atmosphere</label>
+	<input type="checkbox" name="likes" value="dorm rooms"/><label for="students">Dorm Rooms</label>
+	<input type="checkbox" name="likes" value="sports"/><label for="students">Sports</label>
+	<label for="c" onclick="another()" style="color: white">C</label>
+	</p>
+	<h2>How did you become interested in our university?</h2>
+	<input type="radio" name="interest" onclick="activate()" value="friends"/><label for="friends">Friends</label>
+	<input type="radio" name="interest" onclick="activate()" value="internet"/><label for="internet">Internet</label>
+	<input type="radio" name="interest" onclick="activate()" value="television"/><label for="television">Television</label>
+	<input type="radio" name="interest" value="other" onclick="activate()" id="other"/><label for="other">Other</label>
+	<input type="text" id="other_interest" style="display:none"/>
+	<br><br>
+	<input type="submit" value="Submit"/>
+	<input type="reset" value="Reset"/>
+
+<!-- </fieldset> -->
+</form>
+</div>
+<style>
+.bg{
+top: 0; bottom: 0; left: 0; right: 0;
+/*background: url(something.png);*/
+/*opacity: 0.5;*/
+}
+
+.bg::after{
+background: url(something.png);
+opacity: 0.5;
+width: 100%;
+height: 100%;
+}
+
+body{
+	/*background: url(something.png);*/
+	opacity: 1;
+}
+</style>
+
+</body>
+</html>
