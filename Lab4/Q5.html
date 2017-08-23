@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" name="o1" id='o1'>
+<input type="text" name="ox" id='ox'>
+<input type="text" name="o2" id='o2'>
+<input type="submit" name="submit" value="Compute" onClick="something()">
+
+<script type="text/javascript">
+	function something(){
+		var a = document.getElementById('o1').value
+		var b = document.getElementById('ox').value
+		var c = document.getElementById('o2').value
+
+		if(b=='+')
+			alert(Number(a)+Number(c))
+		if(b=='-')
+			alert(Number(a)-Number(c))
+		if(b=='*')
+			alert(Number(a)*Number(c))
+		if(b=='/')
+			alert(Number(a)/Number(c))
+	}
+</script>
+</body>
+</html>
