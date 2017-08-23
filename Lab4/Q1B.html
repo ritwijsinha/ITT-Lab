@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id='k'></p>
+<script type="text/javascript">
+	var n = prompt('Enter n')
+	var list = ['<table border="1" align="center" style="width:50%" cellpadding="10">']
+	list.push('<tr align="center"><th>Number</th><th>Squared</th></tr>');
+	for(i=1; i<=n; i++)
+	{
+		list.push('<tr align="center"><td>'+i+'</td><td>'+i*i+'</th></td>');
+	}
+
+	list.push('</table>');
+	document.getElementById('k').innerHTML = list.join('')
+</script>
+</body>
+</html>
